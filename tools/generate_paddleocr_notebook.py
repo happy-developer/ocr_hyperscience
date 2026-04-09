@@ -71,7 +71,7 @@ DATASET_SLUG = "osamahosamabdellatif/high-quality-invoice-images-for-ocr"
 TRAIN_BATCH_NAME = "batch_1"
 UNLABELED_VAL_BATCH_NAME = "batch_2"
 
-TRAIN_VAL_SPLIT = 0.9  # split supervise interne sur batch_1
+TRAIN_VAL_SPLIT = 0.75  # train-test split supervise 75/25 sur batch_1
 RANDOM_SEED = 42
 BATCH2_MAX_IMAGES = 300  # limite de validation qualitative sur batch_2
 
