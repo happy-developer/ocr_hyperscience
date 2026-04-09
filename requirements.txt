@@ -1,0 +1,19 @@
+# OCR pipeline dependencies (TensorFlow-free)
+#
+# GPU setup used in this project (WSL):
+# 1) pip install paddlepaddle-gpu==2.6.1.post120 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html
+# 2) pip install nvidia-cudnn-cu11==8.9.6.50
+#
+# Note: kernel 'paddle-gpu-wsl' already injects:
+#   CUDA_HOME=/home/fback/ocr_hyperscience/.cuda_local
+#   LD_LIBRARY_PATH=/usr/lib/wsl/lib:/home/fback/ocr_hyperscience/.cuda_local/lib64
+
+kagglehub>=0.3.6
+paddleocr==2.8.1
+opencv-python>=4.10.0
+pandas>=2.2.0
+numpy>=1.26.0
+matplotlib>=3.8.0
+PyYAML>=6.0
+tqdm>=4.66.0
+nbformat>=5.10.0
