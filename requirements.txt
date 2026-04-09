@@ -1,15 +1,20 @@
-# OCR pipeline dependencies (TensorFlow-free)
+﻿# OCR pipeline dependencies (TensorFlow-free, kernel-safe)
 #
 # GPU setup used in this project (WSL):
 # 1) pip install paddlepaddle-gpu==2.6.1.post120 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html
 # 2) pip install nvidia-cudnn-cu11==8.9.6.50
 #
-# Note: kernel 'paddle-gpu-wsl' already injects:
+# Note: kernel 'paddle-gpu-wsl' injects:
 #   CUDA_HOME=/home/fback/ocr_hyperscience/.cuda_local
 #   LD_LIBRARY_PATH=/usr/lib/wsl/lib:/home/fback/ocr_hyperscience/.cuda_local/lib64
+#
+# Important:
+# - In-kernel OCR uses RapidOCR (stable in this environment).
+# - PaddleOCR training is launched via subprocess from the cloned PaddleOCR repository.
 
 kagglehub>=0.3.6
-paddleocr==2.8.1
+rapidocr-onnxruntime==1.4.4
+onnxruntime>=1.24.0
 opencv-python>=4.10.0
 pandas>=2.2.0
 numpy>=1.26.0
@@ -17,3 +22,4 @@ matplotlib>=3.8.0
 PyYAML>=6.0
 tqdm>=4.66.0
 nbformat>=5.10.0
+ipykernel>=6.29.0
